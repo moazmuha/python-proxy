@@ -33,7 +33,10 @@ while inputs:
                 if sock in outputs:
                     outputs.remove(sock)
                 connections.pop(sock, None)
-        clients, servers, exceptions = select.select(inputs, outputs, inputs,5)
+        try:
+            clients, servers, exceptions = select.select(inputs, outputs, inputs,5)
+        except: 
+            continue
 
         
     for sock in clients:
@@ -163,8 +166,12 @@ while inputs:
                     # cache hit, serve up from cache
                     with open(filename, "rb") as cache:
                         while data:
-                            data = cache.read(1024)
-                            sock.send(data)
+                            try:
+                                data = cache.read(1024)
+                                sock.send(data)
+                            except:
+                                continue
+
         for sock in exceptions:
             # close connections
             inputs.remove(sock)
