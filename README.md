@@ -25,8 +25,8 @@ You may try to load all the pages at once in different tabs. Pages being loaded 
 ![image](https://user-images.githubusercontent.com/66569506/116111006-38933f00-a684-11eb-8342-f4b2a2511f51.png)
 
 ## Notes
-•Improvements can be made, message me or open an issue if you would like to contribute
-•The same favicon.ico is used for all pages currently. 
+•Improvements can be made, message me or open an issue if you would like to contribute <br />
+•The same favicon.ico is used for all pages currently. <br />
 •The project was to be completed without the zlib library, hence why we request a non compressed version of pages so we can add the HTML tag without having to decompress data. This may be a cuase of furhter slowdowns. However, not adding new imports was a requirement for this porject.
 
 
