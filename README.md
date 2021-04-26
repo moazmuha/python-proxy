@@ -6,13 +6,13 @@
 •Supports HTTP pages. Redirects any pages that use HTTPS
 
 ## Contents
-1.[User Guide](#userguide) <br>
+1.[User Guide](#Guide) <br>
 2.[Links for Testing](#Links)  <br>
 3.[Examples](#Examples) <br>
 4.[Notes](#Notes)
 
 
-## User Guide
+## Guide
 1. Download the repo
 2. Run using "python proxy.py"
 4. Takes optional cache expire time argument. Default value for cache expire time is 120 seconds if no time argument is given. To specify time use command "python proxy.py [time]" where time is in an integer in seconds.
@@ -32,7 +32,7 @@ You may try to load all the pages at once in different tabs. Pages being loaded 
 ![image](https://user-images.githubusercontent.com/66569506/116111484-b0fa0000-a684-11eb-8ab4-acd6cf508164.png)
 ![image](https://user-images.githubusercontent.com/66569506/116111006-38933f00-a684-11eb-8342-f4b2a2511f51.png)
 
-## Notes you(notes)
+## Notes
 •Improvements can be made, message me or open an issue if you would like to contribute <br />
 •Caching needs to be improved <br />
 •The same favicon.ico is used for all pages currently. <br />
