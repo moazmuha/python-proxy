@@ -32,6 +32,7 @@ while inputs:
                 inputs.remove(sock)
                 if sock in outputs:
                     outputs.remove(sock)
+                sock.close() #added
                 connections.pop(sock, None)
         clients, servers, exceptions = select.select(inputs, outputs, inputs,5)
 
@@ -50,6 +51,7 @@ while inputs:
                 inputs.remove(sock)
                 if sock in outputs:
                     outputs.remove(sock)
+                sock.close() #added
                 connections.pop(sock, None)
                 continue
             #try in case client shuts connection
@@ -113,7 +115,7 @@ while inputs:
                         raise Exception("cache has expired")
                 except:
                     cacheMiss = True
-                # if cache miss connect to host
+                # if cache miss, connect to host
                 if cacheMiss:
                     webSocket = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
                     webSocket.connect((host,80))
@@ -154,8 +156,10 @@ while inputs:
                                 with open(filename, "ab") as cache:
                                     cache.write(respCache)
                             else:
+                                webSocket.close()
                                 break
                         except:
+                            webSocket.close()
                             break
                 else:
                     # cache hit, serve up from cache
