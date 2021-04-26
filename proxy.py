@@ -24,7 +24,7 @@ print("listening for connections...")
 while inputs:
     # raises error if any connection is broken
     try:
-        clients, servers, exceptions = select.select(inputs, outputs, inputs)
+        clients, servers, exceptions = select.select(inputs, outputs, inputs,5)
     except:
         # loop through sockets and ensure no connection is broken
         for sock in inputs:
@@ -33,7 +33,7 @@ while inputs:
                 if sock in outputs:
                     outputs.remove(sock)
                 connections.pop(sock, None)
-        clients, servers, exceptions = select.select(inputs, outputs, inputs)
+        clients, servers, exceptions = select.select(inputs, outputs, inputs,5)
 
         
     for sock in clients:
@@ -101,19 +101,17 @@ while inputs:
             try:
                 # grab request
                 host, nextRequest, file = connections[sock].pop(0)
-                # create cache file end with $ so no file extensions and all the files are the same type
-                cacheMiss = False
+                # create cache file, end with $ so no file extensions and all the files are the same type
                 filename = "{}_{}".format(host,file)
                 filename = filename.replace("/","$")
                 filename += "$"
                 # check if request cached and cache time not expired, else create cache file
                 try:
                     if ((time.time() - os.path.getmtime(filename)) < cacheTime):
-                        cache = open(filename, "rb")
+                        cacheMiss = False
                     else:
                         raise Exception("cache has expired")
                 except:
-                    cache = open(filename, "wb")
                     cacheMiss = True
                 # if cache miss connect to host
                 if cacheMiss:
@@ -127,7 +125,6 @@ while inputs:
             else:
                 # send request to host since cache miss
                 if cacheMiss:
-                    # print("the request is: \n ",nextRequest)
                     webSocket.sendall(nextRequest.encode())
                     while True:
                         try:
@@ -140,12 +137,13 @@ while inputs:
                                 restResp = webResponse[1].split(b'>')
                                 respCache = newResp
                                 bodyTag = restResp.pop(0)
+                                currentTime = time.strftime('%Y-%m-%d %H:%M:%S', time.localtime(time.time())).encode()
                                 newResp +=  bodyTag + b'><p style="z-index:9999; position:fixed; top:20px; left:20px; width:200px; \
                                 height:100px; background-color:yellow; padding:10px; font-weight:bold;">' \
-                                + b"FRESH VERSION AT:" + time.strftime('%Y-%m-%d %H:%M:%S', time.localtime(time.time())).encode() +b'</p'
+                                + b"FRESH VERSION AT:" + currentTime +b'</p'
                                 respCache +=  bodyTag + b'><p style="z-index:9999; position:fixed; top:20px; left:20px; width:200px; \
                                 height:100px; background-color:yellow; padding:10px; font-weight:bold;">' \
-                                + b"CACHED VERSION AS OF:" + time.strftime('%Y-%m-%d %H:%M:%S', time.localtime(time.time())).encode() +b'</p'
+                                + b"CACHED VERSION AS OF:" + currentTime +b'</p'
                                 for s in restResp:
                                     newResp += b'>' + s
                                     respCache += b'>' + s
@@ -153,23 +151,18 @@ while inputs:
                             # send response back to client and write to cache 
                             if(len(webResponse)>0):
                                 sock.send(webResponse)
-                                cache.write(respCache)
+                                with open(filename, "ab") as cache:
+                                    cache.write(respCache)
                             else:
-                                cache.close()
                                 break
                         except:
-                            cache.close()
                             break
                 else:
                     # cache hit, serve up from cache
-                    while True: 
-                        data = cache.read(1024)
-                        if data:
+                    with open(filename, "rb") as cache:
+                        while data:
+                            data = cache.read(1024)
                             sock.send(data)
-                        else:
-                            cache.close()
-                            break
-        
         for sock in exceptions:
             # close connections
             inputs.remove(sock)
