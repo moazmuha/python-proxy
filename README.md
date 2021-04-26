@@ -5,6 +5,10 @@
 •Adds label to inform client if they are accessing a Cached or Fresh version of the page <br />
 •Supports HTTP pages. Redirects any pages that use HTTPS
 
+## Contents
+1.[SUser Guide](#User Guide)
+
+
 ## User Guide
 1. Download the repo
 2. Run using "python proxy.py"
