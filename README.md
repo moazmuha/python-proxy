@@ -32,7 +32,7 @@ You may try to load all the pages at once in different tabs. Pages being loaded 
 ![image](https://user-images.githubusercontent.com/66569506/116111484-b0fa0000-a684-11eb-8ab4-acd6cf508164.png)
 ![image](https://user-images.githubusercontent.com/66569506/116111006-38933f00-a684-11eb-8342-f4b2a2511f51.png)
 
-## Notes
+## Notes you
 •Improvements can be made, message me or open an issue if you would like to contribute <br />
 •Caching needs to be improved <br />
 •The same favicon.ico is used for all pages currently. <br />
