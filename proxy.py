@@ -32,7 +32,6 @@ while inputs:
                 inputs.remove(sock)
                 if sock in outputs:
                     outputs.remove(sock)
-                sock.close() #added
                 connections.pop(sock, None)
         clients, servers, exceptions = select.select(inputs, outputs, inputs,5)
 
@@ -51,7 +50,6 @@ while inputs:
                 inputs.remove(sock)
                 if sock in outputs:
                     outputs.remove(sock)
-                sock.close() #added
                 connections.pop(sock, None)
                 continue
             #try in case client shuts connection
