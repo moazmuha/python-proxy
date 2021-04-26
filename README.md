@@ -6,10 +6,10 @@
 •Supports HTTP pages. Redirects any pages that use HTTPS
 
 ## Contents
-1.[User Guide](#Guide) <br>
-2.[Links for Testing](#Links)  <br>
-3.[Examples](#Examples) <br>
-4.[Notes](#Notes)
+1. [User Guide](#Guide) 
+2. [Links for Testing](#Links) 
+3. [Examples](#Examples) 
+4. [Notes](#Notes)
 
 
 ## Guide
