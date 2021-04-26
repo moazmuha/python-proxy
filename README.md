@@ -6,7 +6,7 @@
 •Supports HTTP pages. Redirects any pages that use HTTPS
 
 ## Contents
-1.[SUser Guide](#User Guide)
+1.[User Guide](#UserGuide)
 
 
 ## User Guide
