@@ -1,9 +1,9 @@
 # Simple Python Proxy
-•A Proxy Server using Python’s Socket API  
-•Proxy server handles simultaneous TCP connections  
-•Caches pages for set amount of time  
-•Adds label to inform client if they are accessing a Cached or Fresh version of the page <br> 
-•Supports HTTP pages. Redirects any pages that use HTTPS
+• A Proxy Server using Python’s Socket API  
+• Proxy server handles simultaneous TCP connections  
+• Caches pages for set amount of time  
+• Adds label to inform client if they are accessing a Cached or Fresh version of the page 
+• Supports HTTP pages. Redirects any pages that use HTTPS
 
 ## Contents
 1. [User Guide](#Guide) 
@@ -33,10 +33,10 @@ You may try to load all the pages at once in different tabs. Pages being loaded 
 ![image](https://user-images.githubusercontent.com/66569506/116111006-38933f00-a684-11eb-8342-f4b2a2511f51.png)
 
 ## Notes
-•Improvements can be made, message me or open an issue if you would like to contribute <br />
-•Caching needs to be improved <br />
-•The same favicon.ico is used for all pages currently. <br />
-•The project was completed without the zlib library, hence why we request a decompressed version of pages so we can add the HTML tag without having to decompress data. This may be a cause of further slowdowns. However, not adding new imports was a requirement for this porject. <br />
+• Improvements can be made, message me or open an issue if you would like to contribute 
+• Caching needs to be improved 
+• The same favicon.ico is used for all pages currently. 
+• The project was completed without the zlib library, hence why we request a decompressed version of pages so we can add the HTML tag without having to decompress data. This may be a cause of further slowdowns. However, not adding new imports was a requirement for this porject. 
 
 
 
