@@ -13,11 +13,12 @@
 
 ## Links
 Here are some links you can try. Note: Larger pages with many images may take some time to load. Be pateint :)
-1. http://localhost:8888/www.cs.toronto.edu/~ylzhang/
-2. http://localhost:8888/www.cs.toronto.edu/~arnold/
-3. http://localhost:8888/www.cs.toronto.edu/~ylzhang/csc258/memes.html
+1. http://localhost:8888/www.example.org (should load almost instantly)
+2. http://localhost:8888/www.cs.toronto.edu/~ylzhang/
+3. http://localhost:8888/www.cs.toronto.edu/~arnold/ (images may take time to show up)
+4. http://localhost:8888/www.cs.toronto.edu/~ylzhang/csc258/memes.html (may take time to load all images)
 
-You may try to load all the pages at once in different tabs. Pages being loaded simultaneously have been tested but may slow down the loading of pages further. The available hardware resources of the system the server is running on can make a substantial difference in how long it may take pages to load. If the pages refuse to load, try restarting the server.
+You may try to load all the pages at once in different tabs. Pages being loaded simultaneously have been tested but may slow down the loading of pages further. The available hardware resources of the system the server is running on can make a substantial difference in how long it may take pages to load. Cached pages should load significantly faster. If the pages refuse to load, try restarting the server. 
 
 
 ## Examples
@@ -27,7 +28,7 @@ You may try to load all the pages at once in different tabs. Pages being loaded 
 ## Notes
 •Improvements can be made, message me or open an issue if you would like to contribute <br />
 •The same favicon.ico is used for all pages currently. <br />
-•The project was to be completed without the zlib library, hence why we request a decompressed version of pages so we can add the HTML tag without having to decompress data. This may be a cuase of furhter slowdowns. However, not adding new imports was a requirement for this porject.
+•The project was to be completed without the zlib library, hence why we request a decompressed version of pages so we can add the HTML tag without having to decompress data. This may be a cause of further slowdowns. However, not adding new imports was a requirement for this porject.
 
 
 
