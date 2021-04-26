@@ -27,8 +27,10 @@ You may try to load all the pages at once in different tabs. Pages being loaded 
 
 ## Notes
 •Improvements can be made, message me or open an issue if you would like to contribute <br />
+•Caching needs to be improved <br />
 •The same favicon.ico is used for all pages currently. <br />
-•The project was completed without the zlib library, hence why we request a decompressed version of pages so we can add the HTML tag without having to decompress data. This may be a cause of further slowdowns. However, not adding new imports was a requirement for this porject.
+•The project was completed without the zlib library, hence why we request a decompressed version of pages so we can add the HTML tag without having to decompress data. This may be a cause of further slowdowns. However, not adding new imports was a requirement for this porject. <br />
+
 
 
 
