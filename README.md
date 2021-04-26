@@ -13,7 +13,7 @@
 
 ## Links
 Here are some links you can try. Note: Larger pages with many images may take some time to load. Be pateint :)
-1. http://localhost:8888/www.example.org (should load almost instantly)
+1. http://localhost:8888/www.example.org (should load very quick)
 2. http://localhost:8888/www.cs.toronto.edu/~ylzhang/
 3. http://localhost:8888/www.cs.toronto.edu/~arnold/ (images may take time to show up)
 4. http://localhost:8888/www.cs.toronto.edu/~ylzhang/csc258/memes.html (may take time to load all images)
