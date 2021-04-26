@@ -12,5 +12,7 @@
 5. In your browser enter http://localhost:8888/[websiteURL]. For example try http://localhost:8888/www.example.org
 
 ## Examples
-![image](https://user-images.githubusercontent.com/66569506/116007738-3a56f700-a5df-11eb-92df-c4380b81adf1.png)
+![image](https://user-images.githubusercontent.com/66569506/116111154-5d87b200-a684-11eb-9449-465e85d17766.png)
+![image](https://user-images.githubusercontent.com/66569506/116111006-38933f00-a684-11eb-8342-f4b2a2511f51.png)
+
 
