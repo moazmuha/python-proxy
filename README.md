@@ -2,11 +2,14 @@
 •A Proxy Server using Python’s Socket API  
 •Proxy server handles simultaneous TCP connections  
 •Caches pages for set amount of time  
-•Adds label to inform client if they are accessing a Cached or Fresh version of the page <br />
+•Adds label to inform client if they are accessing a Cached or Fresh version of the page 
 •Supports HTTP pages. Redirects any pages that use HTTPS
 
 ## Contents
-1.[User Guide](#UserGuide)
+1.[User Guide](#userguide) <br>
+2.[Links for Testing](#Links)  <br>
+3.[Examples](#Examples) <br>
+4.[Notes](#Notes)
 
 
 ## User Guide
