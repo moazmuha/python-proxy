@@ -31,6 +31,8 @@ You may try to load all the pages at once in different tabs. Pages being loaded 
 ## Examples
 ![image](https://user-images.githubusercontent.com/66569506/116111484-b0fa0000-a684-11eb-8ab4-acd6cf508164.png)
 ![image](https://user-images.githubusercontent.com/66569506/116111006-38933f00-a684-11eb-8342-f4b2a2511f51.png)
+![proxy](https://user-images.githubusercontent.com/66569506/116785196-3fe09100-aa66-11eb-8588-d5d3fe287521.gif)
+
 
 ## Notes
 • Improvements can be made, message me or open an issue if you would like to contribute <br>
